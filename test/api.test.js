@@ -19,3 +19,19 @@ describe('POST /gpiodata', function() {
       });
   });
 });
+
+describe('GET /gpiodata', function() {
+    it('should send the GPIOList', function(done) {
+      request(app)
+        .get('/gpiodata')
+        .set('Accept', 'application/json')
+        .expect('Content-Type', /json/)
+        .expect(200)
+        .end(function(err, res) {
+          if (err) return done(err);
+            // Check if the response has a property 'GPIOList' which should be an array
+          expect(res.body).to.have.property('GPIOList').that.is.an('array');
+          done();
+        });
+    });
+  });

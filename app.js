@@ -21,9 +21,10 @@ app.post('/gpiodata', (req,res) => {
 });
 
 // GPIO to frontend
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-  })
+app.get('/gpiodata', (req, res) => {
+    // Send the stored GPIOList
+    res.json({ GPIOList: GPIOList });
+});
 
 // Export the app for use in other files (like server, test files)
 module.exports = app;
