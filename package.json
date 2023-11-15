@@ -1,0 +1,28 @@
+{
+  "name": "inclubackend",
+  "version": "1.0.0",
+  "description": "Instrumentcluster back-end which gets data from hardware reader and transmits it to the front-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaakkoLipp/inCluBackEnd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaakkoLipp/inCluBackEnd/issues"
+  },
+  "homepage": "https://github.com/JaakkoLipp/inCluBackEnd#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
+  }
+}
