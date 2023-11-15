@@ -7,7 +7,22 @@ describe('POST /gpiodata', function() {
   it('should receive a list and respond with a message', function(done) {
     request(app)
       .post('/gpiodata')
-      .send({ GPIOLIST: ["item1", "item2", "item3"] })
+      .send({
+        "GPIOLIST": [
+        "3",        // 0: Gear (str)
+        60,             // 1: Speed (int)
+        3000,           // 2: RPM (int)
+        false,          // 3: BlinkLeft (Boolean)
+        true,           // 4: BlinkRight (Boolean)
+        false,          // 5: LongLight (Boolean)
+        false,          // 6: CheckEngine (Boolean)
+        true,           // 7: CheckOil (Boolean)
+        "Trip: 69420KM", // 8: StatusText (str)
+        "21:11",        // 9: Clock (str)
+        false,          // 10: NightPanel (Boolean)
+        false,          // 11: CheckFuel (Boolean)
+        "90°C"          // 12: WaterTemp (str)
+    ]})
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200)

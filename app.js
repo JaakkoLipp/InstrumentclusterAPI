@@ -11,6 +11,23 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
+
+//GPIOdata List contains:
+// 0: Gear:str
+// 1: speed:int
+// 2: RPM:int
+// 3: BlinkLeft:Boolean
+// 4: BlinkRight:Boolean
+// 5: LongLight:Boolean
+// 6: CheckEngine:Boolean
+// 7: CheckOil:Boolean
+// 8: statusText:str
+// 9: Clock:str
+// 10: NightPanel:Boolean
+// 11: CheckFuel:Boolean
+// 12: WaterTemp:str
+
+
 // Define a POST route for /gpiodata, data from GPIO hardware
 app.post('/gpiodata', (req,res) => {
     // store list
