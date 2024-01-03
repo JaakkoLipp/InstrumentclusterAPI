@@ -1,1 +1,6 @@
-# WIP Instrumentcluster middleware API which gets data from hardware reader for the front-end
+# WIP Instrumentcluster middleware API 
+get data from hardware python reader for the front-end
+- Vue.js
+- Node.js
+- routes
+- SVG for dials
